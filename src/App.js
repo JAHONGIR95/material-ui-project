@@ -8,12 +8,11 @@ const useStyles = makeStyles((theme) => ({}))
 
 function App() {
   const classes = useStyles()
-
-  return (
-    <div className="app">
-      <Navbar />
-    </div>
-  )
+    return (
+      <div className="app">
+        <Navbar />
+      </div>
+    )
 }
 
 export default App
