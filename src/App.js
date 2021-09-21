@@ -5,7 +5,13 @@ import Leftbar from './components/Leftbar'
 import Feed from './components/Feed'
 import Rightbar from './components/Rightbar'
 
-const useStyles = makeStyles((theme) => ({}))
+const useStyles = makeStyles((theme) => ({
+  right: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
+  }
+}))
 
 
 
@@ -13,11 +19,11 @@ function App() {
   const classes = useStyles()
     return (
       <div className="app">
-        <Navbar />
+        <Navbar /> 
         <Grid container>
-          <Grid item sm={2}><Leftbar /></Grid> 
-          <Grid item sm={7}><Feed /></Grid>
-          <Grid item sm={3}><Rightbar/></Grid>
+          <Grid item sm={2} xs={2}><Leftbar /></Grid> 
+          <Grid item sm={7} xs={10}><Feed /></Grid>
+          <Grid item sm={3} className={classes.right}><Rightbar/></Grid>
         </Grid>
       </div>
     )

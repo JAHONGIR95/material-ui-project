@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, makeStyles } from '@material-ui/core'
+import Post from './Post'
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -14,7 +15,7 @@ function Feed() {
 
   return (
     <Container className={classes.container}>
-        <h1>hello world!</h1>
+      <Post />
     </Container>
   )
 }
