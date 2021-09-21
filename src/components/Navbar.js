@@ -67,7 +67,7 @@ function Navbar() {
   const classes = useStyles( {open} )
 
   return (
-    <AppBar>
+    <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
             <Typography variant='h6' className={classes.logoLg}>
                 Jahin Dev
@@ -78,7 +78,7 @@ function Navbar() {
             <div className={classes.search}>
                 <Search />
                 <InputBase placeholder="Search..." className={classes.input} />
-                <Cancel className={classes.cancel} onClick={ () => setOpen(false)} />
+                <Cancel className={classes.cancel} onClick={() => setOpen(false)} />
             </div>
             <div className={classes.icons}>
             <Search className={classes.searchIcon} onClick={() => setOpen(true)} />
