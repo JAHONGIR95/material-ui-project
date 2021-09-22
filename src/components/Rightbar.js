@@ -1,19 +1,25 @@
 import React from 'react'
-import { Avatar, Container, ImageList, ImageListItem, makeStyles, Typography } from '@material-ui/core'
+import { Avatar, Container, Divider, ImageList, ImageListItem, Link, makeStyles, Typography } from '@material-ui/core'
 import { AvatarGroup } from '@material-ui/lab'
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    paddingTop: theme.spacing(10)
+    paddingTop: theme.spacing(10),
+    position: 'sticky',
+    top: 0
   },
   title: {
     fontSize: 16,
     fontWeight: 500,
     color: '#555',
+  },
+  link: {
+    fontSize: 15,
+    color: '#555',
+    marginRight: theme.spacing(2),
+    marginBottom: 5,
   }
 }))
-
-
 
 function Rightbar() {
   const classes = useStyles()
@@ -21,7 +27,7 @@ function Rightbar() {
   return (
     <Container className={classes.container}>
       <Typography className={classes.title} gutterBottom>Online Friends</Typography>
-      <AvatarGroup max={6}>
+      <AvatarGroup max={6} style={{ marginBottom: 20 }}>
         <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/1.jpg" />
         <Avatar alt="Travis Howard" src="https://material-ui.com/static/images/avatar/2.jpg" />
         <Avatar alt="Cindy Baker" src="https://material-ui.com/static/images/avatar/3.jpg" />
@@ -32,7 +38,7 @@ function Rightbar() {
       </AvatarGroup>
 
       <Typography className={classes.title} gutterBottom>Gallery</Typography>
-      <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+      <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={124} style={{marginBottom: 20}}>
         <ImageListItem>
           <img src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=164&h=164&fit=crop&auto=format&dpr=2" alt="" />
         </ImageListItem>
@@ -61,6 +67,28 @@ function Rightbar() {
           <img src="https://images.unsplash.com/photo-1589118949245-7d38baf380d6?w=164&h=164&fit=crop&auto=format&dpr=2" alt="" />
         </ImageListItem>
       </ImageList>
+
+      <Typography className={classes.title} gutterBottom>Categories</Typography>
+      <Link href="#" variant="body2" className={classes.link}>
+        Sport
+      </Link>
+      <Link href="#" variant="body2" className={classes.link}>
+        Food
+      </Link>
+      <Link href="#" variant="body2" className={classes.link}>
+        Music
+      </Link>
+      <Divider flexItem/>
+      <Link href="#" variant="body2" className={classes.link}>
+        Movies
+      </Link>
+      <Link href="#" variant="body2" className={classes.link}>
+        Science
+      </Link>
+      <Link href="#" variant="body2" className={classes.link}>
+        Life
+      </Link>
+
     </Container>
   )
 }
