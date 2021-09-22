@@ -8,6 +8,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.primary.main,
         height: '100vh',
         color: '#fff',
+        position: 'sticky',
+        top: 0,
         [theme.breakpoints.up('sm')]: {
             backgroundColor: '#fff',
             color: '#555',
