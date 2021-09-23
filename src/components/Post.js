@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-function Post() {
+function Post({src}) {
     const classes = useStyles()
 
     return (
@@ -26,7 +26,7 @@ function Post() {
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image="https://previews.123rf.com/images/leventegyori/leventegyori1506/leventegyori150600524/41664216-group-of-fruits-isolated.jpg"
+                    image={src}
                     title="My post"
                 />
                 <CardContent>
